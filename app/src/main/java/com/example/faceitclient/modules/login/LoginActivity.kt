@@ -1,7 +1,9 @@
 package com.example.faceitclient.modules.login
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.faceitclient.AuthActivity
 import com.example.faceitclient.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity(), ILoginView {
@@ -13,7 +15,7 @@ class LoginActivity : AppCompatActivity(), ILoginView {
         setContentView(binding.root)
         presenter = LoginPresenter()
         binding.loginButton.setOnClickListener {
-            presenter.authUser()
+            openAuthActivity()
         }
     }
 
@@ -25,5 +27,10 @@ class LoginActivity : AppCompatActivity(), ILoginView {
     override fun onStop() {
         super.onStop()
         presenter.detachView()
+    }
+
+    override fun openAuthActivity() {
+        val intent = Intent(this, AuthActivity::class.java)
+        startActivity(intent)
     }
 }

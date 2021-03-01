@@ -10,4 +10,5 @@
     <color name="primary_default">#141616</color>
     <color name="primary_white">#EBEFF3</color>
     <color name="primary_orange">#FF5500</color>
+    <color name="default_color">#828a99</color>
 </resources>

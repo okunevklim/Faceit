@@ -1,22 +1,15 @@
-package com.example.faceitclient.di.module
+package com.example.faceitclient.network
 
-import androidx.annotation.NonNull
 import com.example.faceitclient.BuildConfig
-import com.example.faceitclient.network.FaceitService
 import com.google.gson.Gson
-import dagger.Module
-import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Inject
-import javax.inject.Singleton
 
-@Module
-class Api @Inject constructor() {
-    lateinit var serviceFaceit: FaceitService
+object Api {
+    private lateinit var serviceFaceit: FaceitService
     var gson = Gson()
 
     private fun init() {
@@ -27,7 +20,7 @@ class Api @Inject constructor() {
             .addInterceptor(logging)
             .build()
         val retrofit = Retrofit.Builder()
-            .baseUrl(SERVER_URL)
+            .baseUrl(URL.SERVER_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
@@ -35,9 +28,6 @@ class Api @Inject constructor() {
         serviceFaceit = retrofit.create(FaceitService::class.java)
     }
 
-    @Provides
-    @NonNull
-    @Singleton
     fun getService(): FaceitService {
         if (!this::serviceFaceit.isInitialized) {
             init()
@@ -45,7 +35,7 @@ class Api @Inject constructor() {
         return serviceFaceit
     }
 
-    companion object {
-        private const val SERVER_URL = "https://api.faceit.com/auth/"
+    object URL {
+        const val SERVER_URL = ""
     }
 }
