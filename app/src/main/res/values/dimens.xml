@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--default dimens-->
+    <dimen name="default_value_zero">0dp</dimen>
+    <dimen name="default_value_five">5dp</dimen>
+    <dimen name="default_padding_ten">10dp</dimen>
+
+    <!-- dimens for text -->
+    <dimen name="text_size_twelve">12sp</dimen>
+    <dimen name="text_size_eighteen">18sp</dimen>
+
+    <!--dimens for login-->
+    <dimen name="login_margin_one_hundred">100dp</dimen>
+    <dimen name="login_logo_margin">64dp</dimen>
+    <dimen name="text_margin_twenty">20dp</dimen>
+    <dimen name="text_margin_top">24dp</dimen>
+
+</resources>

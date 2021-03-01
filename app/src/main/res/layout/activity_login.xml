@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_default">
+
+    <ImageView
+        android:id="@+id/loginLogo"
+        android:layout_width="@dimen/default_value_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/login_logo_margin"
+        android:layout_marginTop="@dimen/login_margin_one_hundred"
+        android:layout_marginEnd="@dimen/login_logo_margin"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/ic_faceit_logo_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginMeeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_margin_one_hundred"
+        android:fontFamily="@font/play_bold"
+        android:text="@string/login_meeting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_eighteen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginLogo" />
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="@dimen/default_value_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin_twenty"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_marginEnd="@dimen/text_margin_twenty"
+        android:fontFamily="@font/play_regular"
+        android:text="@string/login_text"
+        android:textColor="@color/primary_white"
+        android:textSize="@dimen/text_size_twelve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginMeeting" />
+
+    <TextView
+        android:id="@+id/loginButton"
+        android:layout_width="@dimen/default_value_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin_twenty"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_marginEnd="@dimen/text_margin_twenty"
+        android:background="@drawable/bg_rounded_button"
+        android:fontFamily="@font/play_bold"
+        android:paddingTop="@dimen/default_padding_ten"
+        android:paddingBottom="@dimen/default_padding_ten"
+        android:text="@string/login_button"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

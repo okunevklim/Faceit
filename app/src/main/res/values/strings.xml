@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Faceit Client</string>
+    <string name="login_meeting">Добро пожаловать!</string>
+    <string name="login_text">Играйте и подключайтесь к более чем 9 МИЛЛИОНАМ геймеров на крупнейшей киберспортивной платформе</string>
+    <string name="login_button">войти</string>
+    <string name="logo_description">Faceit logo</string>
+</resources>
